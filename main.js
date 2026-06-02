@@ -44,6 +44,46 @@ function toggleMenu() {
   }
 }
 
+// MENSAJE DE ESTADO bajo el botón
+function mostrarMensaje(form, tipo, texto) {
+  let msg = form.querySelector('.form-status-msg');
+  if (!msg) {
+    msg = document.createElement('div');
+    msg.className = 'form-status-msg';
+    msg.style.cssText = [
+      'margin-top:14px',
+      'padding:12px 18px',
+      'border-radius:8px',
+      'font-size:13px',
+      'font-family:var(--mono)',
+      'letter-spacing:0.04em',
+      'opacity:0',
+      'transition:opacity 0.4s ease',
+      'text-align:center'
+    ].join(';');
+    form.appendChild(msg);
+  }
+
+  if (tipo === 'exito') {
+    msg.style.background = 'rgba(29,158,117,0.15)';
+    msg.style.border = '1px solid rgba(29,158,117,0.4)';
+    msg.style.color = '#5DCAA5';
+  } else {
+    msg.style.background = 'rgba(231,76,60,0.12)';
+    msg.style.border = '1px solid rgba(231,76,60,0.35)';
+    msg.style.color = '#e74c3c';
+  }
+
+  msg.textContent = texto;
+  requestAnimationFrame(() => { msg.style.opacity = '1'; });
+
+  // Desaparece suavemente a los 6 segundos
+  setTimeout(() => {
+    msg.style.opacity = '0';
+    setTimeout(() => msg.remove(), 400);
+  }, 6000);
+}
+
 // FORMULARIO DE COTIZACIÓN — envío via send.py (Flask + Gmail SMTP)
 async function handleSubmit(e) {
   e.preventDefault();
@@ -67,12 +107,14 @@ async function handleSubmit(e) {
       btn.textContent = '✓ Solicitud enviada';
       btn.style.background = 'var(--teal)';
       form.reset();
+      mostrarMensaje(form, 'exito', '✓ Su solicitud fue enviada correctamente. Nos pondremos en contacto a la brevedad.');
     } else {
       throw new Error(data.message || 'Error en el servidor');
     }
   } catch (error) {
     btn.textContent = '❌ Error al enviar';
     btn.style.background = '#e74c3c';
+    mostrarMensaje(form, 'error', '❌ No se pudo enviar. Verifique su conexión o contáctenos por WhatsApp.');
     console.error(error);
   } finally {
     setTimeout(() => {
