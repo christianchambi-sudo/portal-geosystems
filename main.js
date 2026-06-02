@@ -44,7 +44,7 @@ function toggleMenu() {
   }
 }
 
-// FORMULARIO DE COTIZACIÓN — envío via send.php (PHPMailer + Gmail SMTP)
+// FORMULARIO DE COTIZACIÓN — envío via send.py (Flask + Gmail SMTP)
 async function handleSubmit(e) {
   e.preventDefault();
 
@@ -55,7 +55,7 @@ async function handleSubmit(e) {
   btn.disabled = true;
 
   try {
-    const response = await fetch('send.php', {
+    const response = await fetch('send.py', {
       method: 'POST',
       body: new FormData(form),
       headers: { 'Accept': 'application/json' }
