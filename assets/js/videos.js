@@ -1,5 +1,5 @@
 // =========================================================
-//  VIDEOS — Titanium Store (sistema de ventas e inventario)
+//  VIDEOS — Titanium Store (sistema de inventario: catálogo, ventas, compras, reportes)
 //  Cada video tiene 2 versiones:
 //    horizontal → se muestra en computadora / tablet
 //    vertical   → se muestra en celular
