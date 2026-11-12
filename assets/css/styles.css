@@ -200,7 +200,8 @@ section{padding:96px 0;position:relative}
 .proj{border-radius:var(--radius);overflow:hidden;background:rgba(4,44,83,.4);border:1px solid var(--border-2);display:flex;flex-direction:column;transition:transform .3s,border-color .3s,box-shadow .3s}
 .proj:hover{transform:translateY(-6px);border-color:var(--border);box-shadow:0 30px 60px -30px rgba(29,158,117,.45)}
 .proj .thumb{aspect-ratio:16/9;background:linear-gradient(135deg,var(--navy-3),var(--navy));display:grid;place-items:center;font-size:3rem;overflow:hidden}
-.proj .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.proj .thumb{position:relative}
+.proj .thumb img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .6s}
 .proj:hover .thumb img{transform:scale(1.05)}
 .proj .thumb{transition:font-size .3s}
 .proj:hover .thumb:not(:has(img)){font-size:3.6rem}
