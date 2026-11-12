@@ -84,8 +84,22 @@ section{padding:96px 0;position:relative}
 .stat-num span{color:var(--teal-light)}
 .stat-label{font-size:.8rem;color:var(--muted);margin-top:6px}
 .hero-visual{position:relative}
-.hero-visual img{border-radius:24px;box-shadow:0 40px 80px -30px rgba(0,0,0,.7),0 0 0 1px var(--border);animation:float 8s ease-in-out infinite}
+.hero-visual .globe{position:relative;animation:float 8s ease-in-out infinite}
+.hero-visual img{border-radius:24px;box-shadow:0 40px 80px -30px rgba(0,0,0,.7),0 0 0 1px var(--border)}
 @keyframes float{50%{transform:translateY(-12px)}}
+/* Puntos de ubicación que parpadean sobre el globo */
+.ping{--c:#5DCAA5;position:absolute;width:10px;height:10px;transform:translate(-50%,-50%);pointer-events:none}
+.ping-amber{--c:#EF9F27}
+.ping i{position:absolute;inset:0;border-radius:50%;background:var(--c);box-shadow:0 0 10px var(--c),0 0 22px var(--c);animation:pingBlink 2.4s ease-in-out infinite}
+.ping::before,.ping::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--c);animation:pingRing 2.4s ease-out infinite}
+.ping::after{animation-delay:1.2s}
+.ping-amber i,.ping-amber::before{animation-delay:.8s}
+.ping-amber::after{animation-delay:2s}
+.ping b{position:absolute;top:50%;left:calc(100% + 10px);transform:translateY(-50%);white-space:nowrap;font:500 .68rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--c);padding:5px 9px;border-radius:999px;background:rgba(2,24,41,.78);border:1px solid color-mix(in srgb,var(--c) 45%,transparent);backdrop-filter:blur(6px)}
+.ping-left b{left:auto;right:calc(100% + 10px)}
+@keyframes pingBlink{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.5);opacity:.45}}
+@keyframes pingRing{0%{transform:scale(1);opacity:.9}100%{transform:scale(4.5);opacity:0}}
+@media (max-width:480px){.ping b{font-size:.58rem;padding:4px 7px}}
 @media (max-width:900px){.hero-grid{grid-template-columns:1fr}.hero-visual{max-width:420px;margin:0 auto}.hero{min-height:auto}}
 
 /* ---------- HERO INTERNO (páginas de división) ---------- */
@@ -287,4 +301,4 @@ footer ul a:hover{color:var(--teal-light)}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
 .reveal.visible{opacity:1;transform:none}
 .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
-@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.hero-visual img,.play-btn,.live-dot::before{animation:none}html{scroll-behavior:auto}}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.hero-visual .globe,.play-btn,.live-dot::before,.ping i,.ping::before,.ping::after{animation:none}html{scroll-behavior:auto}}

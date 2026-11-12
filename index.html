@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=2">
+<link rel="stylesheet" href="assets/css/styles.css?v=3">
 </head>
 <body data-page="home">
 
@@ -34,7 +34,12 @@
       </div>
     </div>
     <div class="hero-visual reveal d2">
-      <img src="assets/img/globo-geosystems.png" alt="Donde la geografía se encuentra con la precisión de datos — GeoSystems" width="543" height="581" fetchpriority="high">
+      <div class="globe">
+        <img src="assets/img/globo-geosystems.png" alt="Donde la geografía se encuentra con la precisión de datos — GeoSystems" width="543" height="581" fetchpriority="high">
+        <!-- Puntos de ubicación que parpadean (posición en % sobre la imagen) -->
+        <span class="ping ping-teal" style="top:55%;left:18%"><i></i><b>Monitoreo nacional</b></span>
+        <span class="ping ping-amber ping-left" style="top:38%;left:75%"><i></i><b>Rastreo satelital</b></span>
+      </div>
     </div>
   </div>
 </section>

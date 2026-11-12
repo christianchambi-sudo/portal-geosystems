@@ -6,3 +6,6 @@
 assets/videos/
 
 __pycache__/
+
+# Configuración local del editor
+.claude/
