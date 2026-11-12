@@ -35,7 +35,8 @@ const VIDEOS = [
 // Rutas: assets/videos/horizontal/<id>.mp4  ·  assets/videos/vertical/<id>.mp4
 // Portadas: assets/img/videos/<id>-h.jpg  ·  assets/img/videos/<id>-v.jpg
 const src = (v, vert) => `assets/videos/${vert ? 'vertical' : 'horizontal'}/${v.id}.mp4`;
-const poster = (v, vert) => `assets/img/videos/${v.id}-${vert ? 'v' : 'h'}.jpg`;
+const POSTER_VER = 2; // súbalo cuando cambie una portada, para evitar la caché
+const poster = (v, vert) => `assets/img/videos/${v.id}-${vert ? 'v' : 'h'}.jpg?v=${POSTER_VER}`;
 
 // ---------------------------------------------------------
 (function () {
