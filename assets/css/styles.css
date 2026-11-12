@@ -149,6 +149,9 @@ section{padding:96px 0;position:relative}
 .srv.featured .body{padding:36px}
 .srv.featured .media{position:relative;min-height:280px}
 .srv.featured .media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.srv.featured .media{display:grid;place-items:center}
+.srv.featured .media .play-btn{transition:transform .3s}
+.srv.featured .media:hover .play-btn{transform:scale(1.1)}
 @media (max-width:800px){.srv.featured{grid-template-columns:1fr}.srv.featured .body{padding:26px}}
 .tag-new{display:inline-block;font-family:var(--mono);font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;padding:4px 10px;border-radius:999px;background:var(--amber);color:#1b1100;margin-bottom:12px}
 
