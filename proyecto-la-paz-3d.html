@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Paz – El Alto en 3D: 50 años de crecimiento urbano | GeoSystems Consulting</title>
+<meta name="description" content="Modelo 3D del crecimiento urbano de La Paz y El Alto entre 1975 y 2025, sobre el relieve real, con datos satelitales abiertos y Python. Laderas, deslizamientos y recursos hídricos.">
+<meta property="og:title" content="La Paz – El Alto en 3D: 50 años de crecimiento urbano">
+<meta property="og:description" content="La mancha urbana se duplicó y lo construido en laderas empinadas creció 2,6 veces.">
+<meta property="og:image" content="assets/img/lapaz-elalto-3d.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css?v=8">
+</head>
+<body data-page="proyecto-lapaz">
+
+<header class="page-hero" style="padding-bottom:40px;position:relative">
+  <div class="bg" style="background-image:url('assets/img/lapaz-elalto-3d.jpg');background-position:right 30%"></div>
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Inicio</a> / Proyectos / Monitoreo La Paz</div>
+    <span class="eyebrow">Glaciología · Cambio climático · Riesgo urbano</span>
+    <h1 class="h-display" style="font-size:clamp(2.2rem,5vw,4rem);margin:14px 0 20px">La Paz – El Alto<br><span class="accent">50 años en 3D</span></h1>
+    <p class="lead">Este proyecto forma parte del <strong style="color:var(--white)">Monitoreo del Glaciar Huayna Potosí</strong>, que sigue el retroceso glaciar y su impacto en el agua de la región metropolitana de La Paz con series temporales de imágenes satelitales. Como primer avance, modelamos en 3D cómo creció la ciudad entre 1975 y 2025 sobre el relieve real del Altiplano y del cañón de La Paz.</p>
+    <div class="pills" style="margin-top:22px"><span class="pill">Teledetección</span><span class="pill">Serie temporal</span><span class="pill">Recursos hídricos</span></div>
+  </div>
+</header>
+
+<!-- VIDEO -->
+<section style="padding-top:20px">
+  <div class="container">
+    <div class="two-col" style="align-items:start">
+      <div class="vplayer reveal" style="aspect-ratio:1/1">
+        <video controls playsinline muted loop preload="metadata" poster="assets/img/lapaz-elalto-3d.jpg">
+          <source src="assets/videos/proyectos/lapaz-elalto-3d.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="reveal d1">
+        <span class="eyebrow">Qué muestra el video</span>
+        <h2 class="h-section">Una ciudad que <span class="accent">trepa las laderas</span></h2>
+        <ul class="check-list">
+          <li>La cámara se acerca al Altiplano y al cañón de La Paz en 1975, con el relieve exagerado ×2 para que se lea la topografía.</li>
+          <li>La mancha urbana (en naranja) crece cada año hasta 2025, con un contador de los km² ocupados.</li>
+          <li>Al final se resalta en rojo lo construido sobre laderas de más de 15°, las zonas más expuestas a deslizamientos.</li>
+        </ul>
+        <p class="lead" style="margin-top:22px">El Alto se extiende en la planicie a más de 4000 m. La Paz, en cambio, ocupa un cañón con cerca de 1000 m de desnivel, y para crecer tuvo que subir por sus laderas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- RESULTADOS -->
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Resultados 1975 → 2025</span>
+      <h2 class="h-section">Lo que dicen <span class="accent">los datos</span></h2>
+    </div>
+    <div class="feat-grid">
+      <div class="feat reveal"><div class="ico">🏙️</div><h4>×2 mancha urbana</h4><p>De ~113 km² en 1975 a ~225 km² en 2025 entre La Paz y El Alto.</p></div>
+      <div class="feat reveal d1"><div class="ico">⛰️</div><h4>×2,6 en laderas</h4><p>Lo construido sobre pendientes de más de 15° pasó de ~12 km² a ~30 km².</p></div>
+      <div class="feat reveal d2"><div class="ico">📈</div><h4>1 de cada 7 km²</h4><p>Hoy cerca del 13% del área urbana está en pendientes fuertes. En 1975 era el 10%.</p></div>
+      <div class="feat reveal d3"><div class="ico">🧱</div><h4>36 → 78 km² de techos</h4><p>La superficie efectivamente construida (techos) también se duplicó en 50 años.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- POR QUE IMPORTA -->
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Por qué importa</span>
+      <h2 class="h-section">Crecimiento, riesgo <span class="accent">y agua</span></h2>
+      <p class="lead">Una ciudad que crece más rápido en las laderas que en lo plano enfrenta más riesgo y necesita más agua. Por eso este análisis urbano es el punto de partida del monitoreo glaciar.</p>
+    </div>
+    <div class="attr-grid">
+      <div class="attr reveal">
+        <div class="ico">⚠️</div>
+        <h4>Deslizamientos</h4>
+        <p class="q">¿Dónde se construye?</p>
+        <ul><li>Las laderas de más de 15° concentran el riesgo</li><li>Eventos como Pampahasi (2011) y Callapa (2019)</li><li>Base para mapas de amenaza y alerta temprana</li></ul>
+      </div>
+      <div class="attr reveal d1">
+        <div class="ico">🌊</div>
+        <h4>Desbordes de ríos</h4>
+        <p class="q">¿Por dónde baja el agua?</p>
+        <ul><li>El modelo 3D muestra las quebradas y torrenteras</li><li>Más techos y pavimento: más escorrentía</li><li>Zonas urbanas junto a cauces en época de lluvias</li></ul>
+      </div>
+      <div class="attr reveal d2">
+        <div class="ico">🧊</div>
+        <h4>Glaciares y agua</h4>
+        <p class="q">¿Alcanza el agua?</p>
+        <ul><li>Los glaciares de la Cordillera Real, como el Huayna Potosí, aportan agua a la ciudad</li><li>Más población, más demanda</li><li>Siguiente etapa: serie temporal del retroceso glaciar</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- METODOLOGIA -->
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Metodología</span>
+      <h2 class="h-section">Cinco pasos, <span class="accent">100% datos abiertos</span></h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal"><h4>Descarga de datos</h4><ul><li>Copernicus DEM GLO-30 (ESA)</li><li>GHSL Built-up Surface (JRC – Comisión Europea)</li><li>11 fechas: 1975 a 2025</li></ul></div>
+      <div class="step reveal d1"><h4>Recorte de la zona</h4><ul><li>La Paz y El Alto</li><li>~27 × 20 km</li><li>Grilla de 30 m</li></ul></div>
+      <div class="step reveal d2"><h4>Pendientes</h4><ul><li>Cálculo en grados desde el DEM</li><li>Umbral de ladera: 15°</li></ul></div>
+      <div class="step reveal d3"><h4>Mancha urbana</h4><ul><li>Superficie construida por celda</li><li>Urbano: más de 10% construido</li><li>km² por año y por pendiente</li></ul></div>
+      <div class="step reveal"><h4>Video 3D</h4><ul><li>Relieve sombreado en Python</li><li>Animación 1975 → 2025</li><li>Formato 1080×1080 para redes</li></ul></div>
+    </div>
+    <p class="lead reveal" style="margin-top:28px;font-size:.92rem;max-width:80ch"><strong style="color:var(--amber)">Alcance:</strong> es un análisis exploratorio. GHSL tiene píxeles de ~90 m y proviene de modelos de clasificación, así que las cifras son aproximadas y muestran la tendencia, no límites exactos de zonas de riesgo. La pendiente sale de un modelo de superficie que incluye edificios. Herramientas: Python (rasterio, NumPy, Matplotlib).</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="cta-band reveal">
+      <h2 class="h-section">¿Quiere ver <span class="accent">su municipio</span> en 3D?</h2>
+      <p class="lead">Hacemos este análisis para cualquier ciudad o cuenca de Bolivia: crecimiento urbano, laderas en riesgo, glaciares y recursos hídricos.</p>
+      <div class="actions">
+        <a href="contacto.html?servicio=Teledetecci%C3%B3n%20y%20An%C3%A1lisis%20Satelital%20(InSAR)" class="btn btn-primary">Solicitar cotización →</a>
+        <a href="geoespacial.html" class="btn btn-ghost">Ver servicios geoespaciales</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="assets/js/main.js?v=2"></script>
+</body>
+</html>
