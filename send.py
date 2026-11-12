@@ -2,6 +2,7 @@
 # Backend Flask para el formulario "Solicitar Cotización"
 # Envía correo a boliviageosystems@gmail.com via Gmail SMTP
 
+import os
 import smtplib
 import html
 from email.mime.multipart import MIMEMultipart
@@ -10,9 +11,12 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-# ── CONFIGURACIÓN — solo edite estas 2 líneas ────────────────────────────────
-GMAIL_USER     = 'boliviageosystems@gmail.com'
-GMAIL_PASSWORD = 'bpco khgh mtag nwne'
+# ── CONFIGURACIÓN ────────────────────────────────────────────────────────────
+# La contraseña NO va en el código (el repositorio es público).
+# Se lee del archivo privado del servidor /etc/geosystems-mail.env:
+#   GMAIL_PASSWORD=xxxx xxxx xxxx xxxx
+GMAIL_USER     = os.environ.get('GMAIL_USER', 'boliviageosystems@gmail.com')
+GMAIL_PASSWORD = os.environ.get('GMAIL_PASSWORD', '')
 # ─────────────────────────────────────────────────────────────────────────────
 
 DESTINATARIO = 'boliviageosystems@gmail.com'

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contacto y Cotización | GeoSystems Consulting</title>
+<meta name="description" content="Solicite una consulta técnica inicial sin costo con GeoSystems Consulting. La Paz y Sucre, Bolivia.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css?v=2">
+</head>
+<body data-page="contact">
+
+<section style="padding-top:calc(var(--nav-h) + 64px)">
+  <div class="container contact-grid">
+    <div>
+      <div class="breadcrumb"><a href="index.html">Inicio</a> / Contacto</div>
+      <span class="eyebrow reveal">Contáctenos</span>
+      <h1 class="h-section reveal" style="font-size:clamp(2.2rem,4.5vw,3.4rem)">¿Listo para <span class="accent">transformar</span> su organización?</h1>
+      <p class="lead reveal">Consulta técnica inicial sin costo. Nuestro equipo evaluará sus necesidades y le propondrá una solución a medida.</p>
+      <div class="c-items">
+        <div class="c-item reveal"><div class="ico">📍</div><div><div class="lbl">Ubicación</div>La Paz, Bolivia<br>Sucre, Bolivia</div></div>
+        <a class="c-item reveal d1" href="mailto:boliviageosystems@gmail.com"><div class="ico">✉️</div><div><div class="lbl">Email</div>boliviageosystems@gmail.com</div></a>
+        <a class="c-item reveal d2" href="tel:+59170178698"><div class="ico">📞</div><div><div class="lbl">Teléfono / WhatsApp</div>+591 70178698</div></a>
+      </div>
+    </div>
+
+    <div class="form-card reveal d1">
+      <h2 style="font-family:var(--serif);font-size:1.6rem;margin-bottom:20px">Solicitar cotización</h2>
+      <form id="cotizacionForm" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group"><label for="f-nombre">Nombre</label><input id="f-nombre" type="text" name="nombre" placeholder="Su nombre completo" required autocomplete="name"></div>
+          <div class="form-group"><label for="f-org">Organización</label><input id="f-org" type="text" name="organizacion" placeholder="Empresa / Entidad" required autocomplete="organization"></div>
+        </div>
+        <div class="form-group"><label for="f-email">Email institucional</label><input id="f-email" type="email" name="email" placeholder="correo@organizacion.bo" required autocomplete="email"></div>
+        <div class="form-group"><label for="f-serv">Servicio de interés</label>
+          <select id="f-serv" name="servicio" required>
+            <option value="">Seleccione un servicio...</option>
+            <optgroup label="I · Geoespacial">
+              <option>Teledetección y Análisis Satelital (InSAR)</option>
+              <option>Sistemas de Alerta Temprana (SAT)</option>
+              <option>Fotogrametría y Mapeo con Drones</option>
+              <option>Catastro y Gestión Territorial (SIG)</option>
+              <option>Telemática y Rastreo IoT</option>
+            </optgroup>
+            <optgroup label="II · Auditoría & Datos">
+              <option>Auditoría de Inversión Pública (VIPFE)</option>
+              <option>Auditoría Financiera Ley 1178 / SAFCO</option>
+              <option>Peritaje y Auditoría Forense</option>
+              <option>Ciberseguridad y Auditoría ASFI</option>
+              <option>Consultoría Corporativa / SEPREC</option>
+              <option>Ingeniería y Arquitectura de Datos</option>
+              <option>Desarrollo de Aplicaciones Web y Escritorio</option>
+              <option>Sistema de Ventas e Inventario (Titanium Store)</option>
+            </optgroup>
+            <optgroup label="III · GeoAI">
+              <option>Inventario de Activos por GIS</option>
+              <option>Auditoría de Obras por Satélite</option>
+              <option>Automatización RPA</option>
+              <option>Business Intelligence</option>
+              <option>Migración Cloud</option>
+            </optgroup>
+            <optgroup label="IV · Capacitación">
+              <option>Programa de Capacitación Técnica</option>
+            </optgroup>
+          </select>
+        </div>
+        <div class="form-group"><label for="f-desc">Descripción del requerimiento</label><textarea id="f-desc" name="descripcion" placeholder="Describa brevemente su necesidad o proyecto..." required></textarea></div>
+        <button type="submit" class="btn btn-primary" style="width:100%">Enviar solicitud →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script src="assets/js/main.js?v=2"></script>
+</body>
+</html>
