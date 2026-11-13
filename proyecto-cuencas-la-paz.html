@@ -127,7 +127,17 @@
       <div class="step reveal d3"><h4>Clasificación urbana</h4><ul><li>Índices NDVI, NDBI y MNDWI</li><li>Modelo entrenado y calibrado con GHSL</li><li>Coherencia año a año</li></ul></div>
       <div class="step reveal"><h4>Métricas y video 3D</h4><ul><li>km² por subcuenca y año</li><li>Franjas de 20 y 50 m a los ríos</li><li>Laderas de más de 15°</li></ul></div>
     </div>
-    <p class="lead reveal" style="margin-top:28px;font-size:.92rem;max-width:80ch"><strong style="color:var(--amber)">Alcance:</strong> es un análisis exploratorio a 30 m de resolución. La clasificación coincide en un 96% con GHSL 2020, y el control con Sentinel-2 confirma la tendencia, aunque no cada píxel. Las cifras son aproximadas y muestran la tendencia, no límites exactos de zonas de riesgo. Las subcuencas se cortan donde cada afluente llega al río principal, por lo que los barrios cercanos a esa unión se cuentan en el Choqueyapu. Herramientas: Python (rasterio, NumPy, SciPy, Matplotlib) y Microsoft Planetary Computer.</p>
+    <div class="reveal" style="margin-top:32px;max-width:80ch">
+      <h3 style="color:var(--amber);font-size:1.15rem;margin-bottom:6px">¿Qué tan exactas son estas cifras?</h3>
+      <ul class="check-list" style="font-size:.95rem;margin-top:12px">
+        <li><span><strong style="color:var(--white)">Nivel de detalle:</strong> el mapa está hecho de cuadrados de 30 × 30 m. Se distinguen barrios, no casas sueltas.</span></li>
+        <li><span><strong style="color:var(--white)">Comparado con otro mapa:</strong> en 96 de cada 100 puntos de la cuenca, nuestro mapa dice lo mismo que el mapa urbano europeo GHSL 2020 (si hay ciudad o no). Gran parte de la cuenca es cerro sin construir, por eso la coincidencia es alta; las diferencias se concentran en los bordes de la ciudad.</span></li>
+        <li><span><strong style="color:var(--white)">Segunda comprobación:</strong> repetimos la medición con las imágenes Sentinel-2, que tienen más detalle, y muestran el mismo crecimiento, aunque no marcan exactamente los mismos puntos.</span></li>
+        <li><span><strong style="color:var(--white)">Para qué sirve:</strong> muestra hacia dónde y cuánto creció la ciudad. No reemplaza un mapa oficial de riesgo ni un estudio de campo.</span></li>
+        <li><span><strong style="color:var(--white)">Cómo se reparten los barrios:</strong> cada subcuenca termina donde su río se une al Choqueyapu. Los barrios junto a esa unión, como la parte baja del Orkojahuira, se cuentan en el Choqueyapu.</span></li>
+        <li><span><strong style="color:var(--white)">Herramientas:</strong> programas gratuitos en Python y las imágenes satelitales de Microsoft Planetary Computer.</span></li>
+      </ul>
+    </div>
   </div>
 </section>
 
