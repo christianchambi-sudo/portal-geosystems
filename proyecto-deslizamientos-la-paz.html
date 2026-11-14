@@ -21,7 +21,11 @@
     <div class="breadcrumb"><a href="index.html">Inicio</a> / Proyectos / Deslizamientos en La Paz</div>
     <span class="eyebrow">InSAR · Sentinel-1 · Riesgo geológico</span>
     <h1 class="h-display" style="font-size:clamp(2.2rem,5vw,4rem);margin:14px 0 20px">¿Se mueve el suelo<br><span class="accent">de La Paz?</span></h1>
-    <p class="lead">Lo medimos desde el espacio, milímetro a milímetro. Con 271 imágenes de radar del satélite Sentinel-1, tomadas entre el 08/01/2016 y el 04/11/2025, calculamos cuánto se movió cada punto del terreno de la cuenca del río La Paz, y encontramos las laderas que se desplazan lentamente, antes de que colapsen.</p>
+    <p class="lead">Lo medimos desde el espacio, milímetro a milímetro. Con 271 imágenes de radar del satélite Sentinel-1, tomadas entre el 08/01/2016 y el 04/11/2025, calculamos cuánto se movió cada punto del suelo de La Paz y sus alrededores, y encontramos las laderas que se desplazan lentamente, antes de que colapsen.</p>
+    <p style="margin-top:14px;max-width:70ch;color:var(--muted,#a9b4c2);font-size:.95rem">
+      <strong style="color:var(--white)">Zona analizada:</strong> la cuenca del río La Paz, es decir, todo el terreno cuyas aguas bajan al río La Paz: la ciudad de La Paz, el borde de El Alto, Achocalla, Mallasa y los valles del sur, unos 30 × 40 km.
+      <strong style="color:var(--white)">¿Desde cuándo se puede medir?</strong> Los satélites Sentinel-1 toman imágenes de radar de todo el planeta desde finales de 2014 y siguen haciéndolo hoy, así que cualquier lugar del mundo se puede analizar desde esa fecha.
+    </p>
     <div class="pills" style="margin-top:22px"><span class="pill">InSAR · Sentinel-1</span><span class="pill">Deslizamientos</span><span class="pill">Geoportal</span></div>
   </div>
 </header>
@@ -39,7 +43,7 @@
         <span class="eyebrow">Video 1 · El hallazgo</span>
         <h2 class="h-section">Diez años de movimiento <span class="accent">en 55 segundos</span></h2>
         <ul class="check-list">
-          <li>La cuenca del río La Paz en 3D, con la velocidad del terreno pintada sobre el relieve.</li>
+          <li>Un recorrido en 3D por las montañas y laderas de La Paz: en rojo y azul aparecen los lugares donde el suelo se movió entre 2016 y 2025.</li>
           <li>Un vuelo hasta Callapa, la ladera del megadeslizamiento de 2011, que sigue bajando cerca de 1 cm por año.</li>
           <li>La comparación con los puntos de monitoreo de la Alcaldía de La Paz.</li>
           <li>El mapa de susceptibilidad a deslizamientos de GeoSystems y las cifras clave.</li>
@@ -106,7 +110,7 @@
       <div class="step reveal d1"><h4>1251 interferogramas</h4><ul><li>Pares de imágenes comparadas</li><li>Procesados con ASF HyP3 (NASA)</li><li>Red de pares cortos y largos</li></ul></div>
       <div class="step reveal d2"><h4>Serie de tiempo</h4><ul><li>MintPy: desplazamiento fecha por fecha</li><li>Corrección de atmósfera y relieve</li><li>Velocidad de cada punto en mm/año</li></ul></div>
       <div class="step reveal d3"><h4>Validación</h4><ul><li>Red de monitoreo del GAMLP</li><li>Inventario oficial de deslizamientos</li><li>Margen medido en terreno estable</li></ul></div>
-      <div class="step reveal"><h4>Susceptibilidad</h4><ul><li>Geología, pendiente, ríos y fallas</li><li>Entrenada con deslizamientos activos e InSAR</li><li>Acierto (AUC) de 0,78 a 0,83</li></ul></div>
+      <div class="step reveal"><h4>Susceptibilidad</h4><ul><li>Geología, pendiente, ríos y fallas</li><li>Entrenada con deslizamientos activos e InSAR</li><li>Acierta en 78 a 83 de cada 100 comparaciones (ver abajo)</li></ul></div>
     </div>
     <div class="reveal" style="margin-top:32px;max-width:80ch">
       <h3 style="color:var(--amber);font-size:1.15rem;margin-bottom:6px">¿Qué tan precisos son estos datos?</h3>
@@ -114,9 +118,33 @@
         <li><span><strong style="color:var(--white)">Margen de error:</strong> ±1,5 mm por año con 95 % de confianza en la velocidad, y de ±4 a 6 mm en cada fecha individual. Solo marcamos "en movimiento" lo que supera 5 mm por año.</span></li>
         <li><span><strong style="color:var(--white)">Nivel de detalle:</strong> cada punto es un área de 40 × 40 m. Se distinguen laderas y manzanos, no casas sueltas.</span></li>
         <li><span><strong style="color:var(--white)">Una sola dirección:</strong> el satélite mide si el terreno se acerca o se aleja de él. Por eso una ladera que se desliza hacia el este puede aparecer en azul ("se acerca") aunque esté bajando.</span></li>
-        <li><span><strong style="color:var(--white)">Qué no detecta:</strong> los colapsos súbitos, como Kantutani (2019) o Bajo Llojeta (2024), porque destruyen la señal del radar. Sí detecta las laderas que se mueven lentamente antes de fallar.</span></li>
+        <li><span><strong style="color:var(--white)">Qué tan bien acierta el mapa de susceptibilidad:</strong> lo pusimos a prueba con deslizamientos reales que el modelo no conocía (el inventario y los puntos de monitoreo de la Alcaldía). Tomamos muchas parejas de lugares, uno donde sí hubo deslizamiento y otro donde no, y vimos cuál marcaba el mapa como más peligroso: acertó entre 78 y 83 de cada 100 veces. Si el mapa no sirviera, acertaría 50 de 100, como tirar una moneda. En términos técnicos, esta medida se llama AUC: 0,78 a 0,83.</span></li>
+        <li><span><strong style="color:var(--white)">Qué no detecta, y por qué:</strong> el satélite reconoce cada punto del suelo por su "huella" de radar y compara esa huella entre imágenes tomadas con días de diferencia. Si el suelo se mueve poco, de milímetros a algunos centímetros, la huella sigue siendo la misma y el satélite mide ese pequeño cambio con gran precisión. En un colapso súbito, como Kantutani (2019) o Bajo Llojeta (2024), el terreno se mueve metros en horas y queda completamente cambiado (tierra removida, viviendas caídas). La huella anterior ya no existe, el satélite no puede reconocer el punto y en ese lugar se pierde la medición. Por eso esta técnica es ideal para detectar <em>antes</em> las laderas que se mueven lento, que son las que pueden terminar colapsando.</span></li>
         <li><span><strong style="color:var(--white)">Para qué sirve:</strong> para priorizar dónde inspeccionar y colocar instrumentos. No reemplaza la verificación en campo.</span></li>
       </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- OTROS PRODUCTOS -->
+<section>
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Con el mismo método</span>
+      <h2 class="h-section">¿Qué más podemos medir <span class="accent">en tu terreno</span>?</h2>
+      <p class="lead">El radar satelital mide cualquier superficie que se mueva lentamente: suelo, rocas, estructuras o rellenos. Con las mismas imágenes Sentinel-1, disponibles desde 2014 para todo el planeta, ofrecemos estos productos para cualquier lugar, sin instalar equipos ni viajar a la zona.</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat reveal"><div class="ico">⬇️</div><h4>Hundimientos del suelo</h4><p>Ciudades o campos que se hunden por la extracción de agua subterránea, por minería o por suelos blandos. Medimos cuánto baja cada zona por año.</p></div>
+      <div class="feat reveal d1"><div class="ico">⛏️</div><h4>Minas y botaderos</h4><p>Estabilidad de taludes, rajos, pilas de material y relaveras. Detectamos los sectores que empiezan a moverse antes de que fallen.</p></div>
+      <div class="feat reveal d2"><div class="ico">🛣️</div><h4>Carreteras y vías férreas</h4><p>Tramos con laderas inestables, terraplenes que se asientan y cortes de cerro que avanzan hacia la vía.</p></div>
+      <div class="feat reveal d3"><div class="ico">🏗️</div><h4>Presas, puentes y edificios</h4><p>Asentamientos y deformaciones de obras grandes: represas, diques, puentes, edificios altos y rellenos urbanos.</p></div>
+      <div class="feat reveal"><div class="ico">🧭</div><h4>Dirección real del movimiento</h4><p>Combinando las dos órbitas del satélite separamos cuánto baja el terreno y cuánto se desplaza hacia los lados, con su dirección en grados.</p></div>
+      <div class="feat reveal d1"><div class="ico">🌋</div><h4>Antes y después de un evento</h4><p>Cuánto se deformó el terreno con un sismo, un deslizamiento o una inundación, comparando imágenes de antes y de después.</p></div>
+      <div class="feat reveal d2"><div class="ico">🗺️</div><h4>Mapas de susceptibilidad y riesgo</h4><p>Cruzamos el movimiento medido con la geología, la pendiente, los ríos y las viviendas para priorizar dónde actuar.</p></div>
+      <div class="feat reveal d3"><div class="ico">📡</div><h4>Monitoreo continuo y geoportal</h4><p>El satélite vuelve a pasar cada 12 días: actualizamos las mediciones de forma periódica y las publicamos en un geoportal propio para tu equipo.</p></div>
     </div>
   </div>
 </section>
